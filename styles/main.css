@@ -1,0 +1,165 @@
+.main {
+    padding: 50px 0;
+}
+
+.about, .services, .reviews, .contacts, .faq {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.services__title, .reviews__title, .contacts__title, .faq__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+.services__item-description, .faq__item-answer, .reviews__item-text {
+    font-size: 1rem;
+    color: #616161;
+}
+
+.services__item-link, .contacts__link {
+    color: #00796b;
+    font-weight: 600;
+}
+
+.services__item-link:hover, .contacts__link:hover {
+    color: #004d40;
+}
+
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.services__item {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviews__list {
+    margin-top: 30px;
+}
+
+.reviews__item {
+    margin-bottom: 20px;
+}
+
+.contacts__list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contacts__item {
+    font-size: 1.2rem;
+}
+
+.faq__list {
+    margin-top: 30px;
+}
+
+.faq__item {
+    margin-bottom: 15px;
+}
+
+.faq__item-question {
+    font-weight: 600;
+    color: #00796b;
+}
+
+.faq__item-answer {
+    color: #616161;
+}
+
+.about {
+    position: relative;
+    padding: 50px 0;
+}
+
+.about__image {
+    background-image: url('../images/freepik__expand__32342.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.about__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.about__content {
+    position: relative;
+    bottom: 80px;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.about__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.about__text {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.about__link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.about__link:hover {
+    background-color: #004d40;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.contacts__list {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contacts__item {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}

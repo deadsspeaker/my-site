@@ -1,0 +1,33 @@
+.header {
+    background-color: #e0f7fa;
+    padding: 20px 0;
+}
+
+.header__title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #00796b;
+}
+
+.header__nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nav__list {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.nav__item {
+    font-size: 1.2rem;
+}
+
+.nav__link {
+    color: #00796b;
+    font-weight: 600;
+}
+
+.nav__link:hover {
+    color: #004d40;
+}
