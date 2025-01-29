@@ -9,19 +9,20 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 30px;
-    color: #000000;
-    background-color: #ffffff;
+    color: #000;
+    background-color: #fff;
     margin: 0;
     padding: 0;
     min-width: 1440px;
-    overflow-x: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Когда ширина экрана больше минимальной */
 @media (min-width: 1440px) {
     body {
-        width: 100%; /* Устанавливаем ширину 100% для больших экранов */
-        overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+        width: 100%;
+        overflow-x: hidden;
     }
 }
 

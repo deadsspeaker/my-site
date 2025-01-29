@@ -17,11 +17,13 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .footer__link {
     font-size: 1.2rem;
     color: #424242;
+    text-decoration: none;
 }
 
 .footer__link:hover {

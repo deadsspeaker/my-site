@@ -55,10 +55,12 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .contacts__item {
     font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 .faq__list {
@@ -150,16 +152,5 @@ ul {
 }
 
 ul li {
-    margin-bottom: 10px;
-}
-
-.contacts__list {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.contacts__item {
-    font-size: 1.2rem;
     margin-bottom: 10px;
 }
