@@ -1,5 +1,9 @@
 .main {
     padding: 50px 0;
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 1920px;
+    flex-grow: 1;
 }
 
 .about, .services, .reviews, .contacts, .faq {
@@ -27,6 +31,16 @@
 }
 
 .services__item-link:hover, .contacts__link:hover {
+    color: #004d40;
+}
+
+.contacts__link {
+    color: #00796b;
+    font-weight: 600;
+    transition: color 0.3s ease-out;
+}
+
+.contacts__link:hover {
     color: #004d40;
 }
 
@@ -139,12 +153,14 @@
     color: #ffffff;
     font-weight: 600;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out, transform 0.3s ease-out;
     text-decoration: none;
 }
 
 .about__link:hover {
     background-color: #004d40;
+    color: #c8e6c9;
+    transform: scale(1.1);
 }
 
 ul {
@@ -153,4 +169,51 @@ ul {
 
 ul li {
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .about__title {
+        font-size: 2rem;
+    }
+
+    .about__text {
+        font-size: 1rem;
+    }
+
+    .about__content {
+        position: sticky;
+    }
+
+    .services__list {
+        grid-template-columns: 1fr;
+    }
+
+    ul {
+        padding-inline-start: 0;
+    }
+
+    .services__item {
+        padding: 15px;
+    }
+
+    .contacts__list {
+        display: block;
+        text-align: center;
+    }
+
+    .contacts__item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .teacher-info {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .about__content {
+        position: relative;
+    }
 }

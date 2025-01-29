@@ -20,12 +20,27 @@
     flex-wrap: wrap;
 }
 
-.footer__link {
-    font-size: 1.2rem;
-    color: #424242;
-    text-decoration: none;
+.footer__nav .nav__link {
+    color: #00796b;
+    font-weight: 600;
+    transition: color 0.3s ease-out;
 }
 
-.footer__link:hover {
-    color: #1976d2;
+.footer__nav .nav__link:hover {
+    color: #004d40;
+}
+
+@media (max-width: 768px) {
+    .footer__text {
+        font-size: 0.9rem;
+    }
+
+    .footer__nav .nav__list {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .footer__link {
+        font-size: 1rem;
+    }
 }
