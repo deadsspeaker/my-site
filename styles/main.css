@@ -88,10 +88,12 @@
 .faq__item-question {
     font-weight: 600;
     color: #00796b;
+    cursor: pointer;
 }
 
 .faq__item-answer {
     color: #616161;
+    display: none;
 }
 
 .about {
@@ -216,4 +218,8 @@ ul li {
     .about__content {
         position: relative;
     }
+}
+
+.show {
+    display: block;
 }
