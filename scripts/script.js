@@ -20,11 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
     */
 
     /* Задание 3.5 */
+    /*
     const faqContainer = document.querySelector('#faq');
     if (faqContainer) {
         const faqList = faqContainer.querySelector('.faq__list');
 
-        /* Моковые данные */
+        /!* Моковые данные *!/
         const faqData = {
             faq1: {
                 question: 'Как проходят занятия?',
@@ -59,6 +60,56 @@ document.addEventListener("DOMContentLoaded", () => {
             faqList.insertAdjacentHTML('beforeend', faqItemElement);
         }
     }
+    */
+
+    /* Задание 3.6 */
+    const faqContainer = document.querySelector('#faq');
+    if (faqContainer) {
+        const faqList = faqContainer.querySelector('.faq__list');
+
+        // Пример URL для получения данных с сервера
+        const apiUrl = 'data.json';
+
+        // Функция для создания карточки вопроса
+        const createFaqItem = (question, answer) => {
+            const faqItem = `
+                <li class="faq__item">
+                    <h3 class="faq__item-question">${question}</h3>
+                    <p class="faq__item-answer">${answer}</p>
+                </li>
+            `;
+
+            return faqItem;
+        }
+
+        // Загрузка данных с сервера
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Данные
+                console.log(typeof (data)); // Тип полученных данных
+
+                data.forEach(item => {
+                    const faqItemElement = createFaqItem(item.question, item.answer);
+                    faqList.insertAdjacentHTML('beforeend', faqItemElement);
+                });
+
+                document.querySelectorAll('.faq__item-question')                        // получаем dom-элементы вопросов
+                    .forEach((question) => {                             // проходимся по ним
+                        question.addEventListener('click', (event) => {    // навесили слушатель на клик
+                            console.log('По вопросу кликнули');
+
+                            const answer = question.parentNode.querySelector('.faq__item-answer'); // получаем связанный с вопросом ответ
+                            if (answer) {
+                                answer.classList.toggle('show');                                                // открываем/закрываем ответ на вопрос
+                            }
+                        })
+                    });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+            });
+    }
 
 
     /*
@@ -76,6 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     *   Блок-схема: /images/block-schema.png
     */
 
+    /*
     document.querySelectorAll('.faq__item-question')                        // получаем dom-элементы вопросов
         .forEach((question) => {                             // проходимся по ним
             question.addEventListener('click', (event) => {    // навесили слушатель на клик
@@ -87,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
         });
+    */
 
 
     const scrollUpButton = document.querySelector('.scroll-up');
@@ -113,5 +166,22 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
+    }
+
+    // Preloader страницы
+    const preloader = document.querySelector('.preloader');
+    const content = document.querySelector('.content');
+    if (preloader && content) {
+        setTimeout(() => {
+            // Скрываем прелоадер
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+
+            // Показываем контент
+            content.style.display = 'block';
+
+            // Удаляем элемент из DOM
+            preloader.remove();
+        }, 3000); // Задержка 3 секунды
     }
 });
