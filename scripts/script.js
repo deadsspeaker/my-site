@@ -29,4 +29,44 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     });
 
+    /* 2. Динамический вывод вопросов. Часть 1 (Используем массив с данными) */
+    const faqContainer = document.querySelector('#faq');
+
+    if (faqContainer) {
+
+        const faqQuestions = ['Как проходят занятия?', 'Можно ли перенести занятие?', 'С какого возраста можно начинать занятия?'];
+
+        const faqItemQuestions = faqContainer.querySelectorAll('.faq__item-question');
+
+        faqItemQuestions.forEach((item, index) => {
+            item.textContent = faqQuestions[index];
+        });
+
+    }
+
+    const scrollUpButton = document.querySelector('.scroll-up');
+
+    if (scrollUpButton) {
+        const windowHeight = document.documentElement.clientHeight; // Определяем высоту видимой части окна браузера
+
+        // Показать кнопку при прокрутке вниз на высоту экрана
+        document.addEventListener('scroll', () => {
+            let scrollPageY = this.scrollY;
+
+            if (scrollPageY >= windowHeight) {
+                scrollUpButton.classList.add('scroll-up--show');
+            } else {
+                scrollUpButton.classList.remove('scroll-up--show');
+            }
+        });
+
+        // Плавная прокрутка наверх при нажатии на кнопку
+        scrollUpButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    }
 });
