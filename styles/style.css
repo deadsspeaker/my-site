@@ -12,3 +12,5 @@
 @import "footer.css";
 /* Подключение стилей относящихся к main */
 @import "main.css";
+/* Подключение стилей относящихся к блокам */
+@import "slider.css";

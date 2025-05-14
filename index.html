@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Репетитор по английскому</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -40,30 +41,33 @@
             </section>
 
 
-            <section id="services" class="services">
+            <section id="services" class="services services--slider swiper">
                 <h2 class="services__title">Услуги</h2>
-                <ul class="services__list">
-                    <li class="services__item">
+                <div class="services__list services__list--slider swiper-wrapper">
+                    <div class="services__item swiper-slide">
                         <h3 class="services__item-title">Индивидуальный английский</h3>
                         <p class="services__item-description">Индивидуальные занятия, адаптированные под ваши цели и уровень.</p>
                         <a class="services__item-link" href="#">Узнать подробнее</a>
-                    </li>
-                    <li class="services__item">
+                    </div>
+                    <div class="services__item swiper-slide">
                         <h3 class="services__item-title">Групповые для начальных классов</h3>
                         <p class="services__item-description">Занятия для учеников младших классов в небольших группах.</p>
                         <a class="services__item-link" href="#">Узнать подробнее</a>
-                    </li>
-                    <li class="services__item">
+                    </div>
+                    <div class="services__item swiper-slide">
                         <h3 class="services__item-title">Групповые для средних классов</h3>
                         <p class="services__item-description">Групповые занятия для учеников среднего звена.</p>
                         <a class="services__item-link" href="#">Узнать подробнее</a>
-                    </li>
-                    <li class="services__item">
+                    </div>
+                    <div class="services__item swiper-slide">
                         <h3 class="services__item-title">Групповые для старших классов</h3>
                         <p class="services__item-description">Подготовка к экзаменам и углубленное изучение английского языка.</p>
                         <a class="services__item-link" href="#">Узнать подробнее</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </section>
 
             <section id="reviews" class="reviews">
@@ -134,6 +138,7 @@
         </button>
     </div>
 
-    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 .main {
     padding: 50px 0;
     margin: 0 auto;
-    width: 100vw;
     max-width: 1920px;
     flex-grow: 1;
 }
@@ -46,8 +45,20 @@
 
 .services__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 278px);
     gap: 20px;
+    padding-left: 0;
+    margin-top: 46px;
+}
+
+.services--slider {
+    padding: 60px 30px;
+}
+
+.services__list--slider {
+    display: flex;
+    gap: 0;
+    margin-top: 0;
 }
 
 .services__item {
